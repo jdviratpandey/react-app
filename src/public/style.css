@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Kaisei HarunoUmi', serif;
+    scroll-behavior: smooth;
+}
+
+.hero-section{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./assets/1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* ============logo style===============/*  */ 
+
+.right-side{
+    display: flex;
+    flex-basis: 20%;
+   width: 100px;
+   height: 100px;
+
+   justify-content: center;
+   align-items: center;
+
+}
+
+.right-side img{
+
+    width: 3rem;
+    height: 3rem;
+    z-index: -1;
+}
+
+/* left-side  menu style */
+
+.left-side{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 2rem;
+
+}
+.left-side ul{
+   display: block;
+}
+
+.left-side ul li{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    margin-top:30px ;
+    margin-right: 20px;
+    
+}
+.left-side ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.b2{
+    position: relative;
+    top: 3px;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.left-side ul li::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid rgb(240, 163, 63);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.left-side ul li:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+.left-side ul li a:active{
+    color:  rgb(240, 163, 63);
+}
+#ham{
+    display: none;
+}
+
+#ham1{
+    display: none;
+}
+@media(max-width:700px){
+    .left-side{
+        transform: translate(-400px);
+        background-color: rgb(0,0,0,0.5);
+        position: relative;
+        right: 0;
+        margin-left: 1.5rem;
+        z-index: 100000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    #ham{
+        display: block;
+    }
+    
+    .left-side ul{
+        display: flex;
+        /* background-color: rgb(0,0,0,0.5);/*  */ 
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        width: 50vw;
+        height: 100vh;
+
+    }
+
+    .left-side ul li a i{
+        margin-left: 00.5rem;
+    }
+     
+}
+
+/* Banner style ========================= */
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner h1{
+font-size: 50px;
+color:rgb(240, 163, 63) ;
+text-align: center;
+overflow-y: hidden;
+}
+.banner p{
+    color: #777;
+    text-align: center;
+    line-height: 28px;
+    font-family: 'Kaisei Tokumin', serif;
+}
+.banner a{
+    text-decoration: none;
+    color: rgb(240, 163, 63);
+    font-size: 22px;
+    background-color: transparent;
+    border: 1px solid rgb(240, 163, 63);
+    padding: 5px;
+    width: 11rem;
+    height: 2.5rem;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 14rem;
+    transition: 1s;
+    overflow-y: hidden;
+}
+
+.banner a:hover{
+    background-color: rgb(240, 163, 63);
+    color: white;
+}
+
+@media(max-width:700px){
+    .banner h1{
+        font-size: 25px;
+        margin-bottom: 4rem;
+    }
+    .banner p{
+        font-size: 15px;
+       
+    }
+    .banner a{
+        padding: 3px;
+        font-size: 17px;
+        margin-left: 0.8rem;
+    }
+}
+
+
+/* product  stye here ========================================================================== */
+
+.product-title{
+    width: 100vw;
+    text-align: center;
+    margin: 1rem;
+    font-size: 30px;
+    display: flex;
+   justify-content: center;
+   color:rgb(240, 163, 63) ;
+
+}
+
+@media(max-width:700px){
+    .product-title{
+        font-size: 20px;
+        margin-left:0 ;
+    }
+}
+
+.product{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.product-card{
+    width: 13.5rem;
+    height: 20rem;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+   border-radius: 3px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+.product-card img{
+    width: 200px;
+    height: 200px;
+}
+.product-card h2{
+ font-size: 18px;
+ overflow-y: hidden;
+ height: 2rem;
+ z-index: 1;
+
+}
+.product-card p{
+    margin-top: 3px;
+    color: #777;
+    margin-left: 0.9rem;
+    overflow-y: hidden;
+
+}
+.product-card span{
+    color:rgb(240, 163, 63) ;
+    overflow-y: hidden;
+}
+.product-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media(max-width:700px){
+    .product{
+        width: 100vw;
+        height: 100vh;
+    }
+    .product-card{
+        margin-top: 2rem;
+    }
+}
+
+/* services section======================================================================= */
+
+.deatils{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    background-color: rgb(224, 223, 223);
+    
+
+}
+.details-img{
+    flex-basis: 30%;
+    width: 100%;
+   
+}
+.details-img img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-left: 2rem;
+    place-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.right-info{
+    flex-basis: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.right-info p{
+    line-height: 27px;
+    margin-top: 1rem;
+    overflow: hidden;
+    
+}
+.right-info h1{
+font-size: 25px;
+overflow: hidden;
+}
+.right-info h1 span{
+    color: rgb(240, 163, 63);
+}
+
+
+
+@media(max-width:700px){
+    .deatils{
+        flex-wrap: wrap-reverse;
+        height: 100vh;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .details-img{
+        flex-basis: 93%;
+        width: 100%;
+       
+    }
+    .right-info h1{
+        font-size: 20px;
+        overflow: hidden;
+        padding-bottom: 1rem;
+        }
+        .right-info p{
+            line-height: 27px;
+            margin-top: 1rem;
+            overflow: hidden;
+            font-size: 15px;
+            
+        }
+}
+/* ======================================box slide */
+.box_slide{
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.box_slide-c{
+    width: 80vw;
+    height: 50vh;
+    overflow-y: hidden;
+    border-radius: 10px;
+
+}
+
+/* ==========================patners  */
+.patner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.patner img{
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 3rem;
+
+}
+@media(max-width:700px)
+{
+    .box_slide{
+        height: 33vh;
+    }
+    .patner{
+     flex-wrap: wrap
+        
+    }
+    .patner img{
+        margin-bottom: 1rem;
+        width: 100px;
+        height: 60px;
+    }
+}
+
+
+/* ===========================Social icon */
+
+.socialicon{
+    position: sticky;
+    top: 50%;
+    left: 0;
+    height: 10rem;
+    width: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 20000;
+    background-color: rgb(240, 163, 63);
+    border-radius: 0px 15px 15px 0px;
+}
+.socialicon .fab{
+    font-size: 20px;
+}
+.socialicon:hover{
+    opacity: 1;
+    width: 3rem;
+    cursor: pointer;
+}
+.fa-pinterest{
+    color: rgb(189, 16, 16);
+}
+.fa-facebook{
+    color: rgb(57, 57, 231);
+}
+.fa-instagram{
+    color: rgb(233, 115, 131);
+}
+.fa-twitter{
+    color: rgb(28, 170, 226);
+}
+.fab:hover{
+    background-color: rgb(235, 235, 235,0.5);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+
+
+/* back to top */
+
+
+#to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: rgb(240, 163, 63);
+    font-weight: bold;
+    color: #ffffff;
+    size: 20px;
+    display: none;
+}
+
+
+/*   about */
+ .about{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+ }
+ .about h2{
+     font-size: 20px;
+     color: rgb(41, 40, 40);
+
+ }
+ .about p{
+     color: #777;
+     line-height: 27px;
+     text-align: center;
+ }
+
+ .footer{
+     width: 100%;
+     position: sticky;
+     display: flex;
+     justify-content: center;
+     background-color: rgb(31, 28, 28);
+ }
+ .footer h2{
+     color: white;
+     font-size: 10px;
+ }
+ .footer h2 span{
+     color: rgb(240, 163, 63);
+ }
+
+ /* ------------------------Hamberger menu-------------------------------- */
+
+ .hm1{
+     color: white;
+     position: fixed;
+     top: 31px;
+     right: 35px;
+     font-size: 25px;
+     display: block;
+     transition: 0.5s;
+     padding: 0.5rem;
+     z-index: 9999999999999999;
+ }
+ .hm1:hover{
+     background-color: rgb(240, 163, 63);
+ }

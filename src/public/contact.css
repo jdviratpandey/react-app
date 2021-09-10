@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: rgb(223, 219, 219);
+}
+/* -------------------------------navbar style---------------------------------------------------------------- */
+
+.container1{
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(1fr,1fr));
+}
+
+.container1 .right-side img{
+    margin-top: 1rem;
+     width: 2rem;
+     height: 2rem;
+}
+
+
+.container1 .right-side{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.container1 .left-side{
+ width: 100vw;
+ display: flex;
+ justify-content: center;
+}
+
+.container1 .left-side ul li{
+    display: inline-block;
+    margin-right: 2rem;
+    list-style: none;
+
+}
+.container1 .left-side ul li a{
+    color: rgb(0, 0, 190);
+    font: 20px;
+    text-decoration: none;
+    position: relative;
+}
+.container1 .left-side ul li{
+    position: relative;
+}
+
+.container1 .left-side ul li::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+   opacity: 0;
+   transition: 0.5s;
+    width: 0%;
+border: 2px solid rgb(0, 4, 255);
+    
+}
+
+.container1 .left-side ul li:hover::after {
+    opacity: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media(max-width:700px){
+    .container1 .left-side  .contactend{
+        display: none;
+    }
+}
+/* -------------------------------navbar style---------------End------------------------------------------------- */
+
+
+/* -------------------------------------main style--------------------- */
+.main{
+    display: grid;
+    width: 80vw;
+    height: 20rem;
+    background-image: linear-gradient(rgba(15, 77, 209, 0.7),rgba(15, 20, 0, 0.7),rgba(15, 77, 209, 0.7)),url('./assets/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 2rem;
+    margin-left: 7rem;
+    justify-content: end;
+    border-radius: 10px;
+    
+}
+
+.main h1{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    right: 7px;
+    bottom: -282px;
+}
+.main h1 i{
+    transform: rotate(-45deg);
+    margin-right: 1rem;
+}
+
+span{
+    color: rgba(15, 77, 209);
+}
+
+@media(max-width:700px){
+    .main{
+        margin-left: 1.5rem;
+        overflow-x: hidden;
+    }
+}
+
+/* --End-----------------------------------main style--------------------- */
+
+/*  --------------card style------------------------------ */
+
+.card-container{
+    width: 80vw;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-left: 7rem;
+}
+
+.card-container .card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    border-radius: 10px;
+   
+    text-align: center;
+}
+.card-container h1{
+    font-size: 15px;
+    color: black;
+    margin-top: 3px;
+}
+.card-container h4{
+    color: #777;
+    margin-top: 3px;
+    font-size: 10px;
+}
+.card-container .card2{
+    width: 100%;
+
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-container .card3{
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+ .card-container div:hover{
+     box-shadow: 1px 1px 1px 1px rgba(73, 86, 204, 0.7);
+     transform: scale(1.1);
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+
+@media(max-width:700px)
+{
+
+    .card-container{
+        margin-left: 1.5rem;
+    }
+}
+/*  --------------card style-------------End----------------- */
+
+
+
+/* ----------------------------------------form control-------------------------- */
+.form-container{
+    width: 80vw;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    
+
+}
+.form-container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+.form-container form label{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.form-container form label input,textarea{
+    border:1px solid #777;
+    width: 27rem;
+    height: 3rem;
+    border-radius: 3px;
+    position: relative;
+    font-size: 15px;
+    padding-left: 2px;
+}
+.form-container form label input:focus{
+    outline: 1px solid rgb(0, 132, 255);
+    border-radius: 3px;
+}
+.form-container form label textarea:focus{
+    outline: 1px solid rgb(0, 132, 255);
+    border-radius: 3px;
+}
+.form-container span{
+    color: red;
+    position: absolute;
+    right: 352px;
+
+}
+
+.btn{
+    border-style: none;
+    padding: 0.5rem;
+    background-color:  rgb(0, 132, 255);
+    border-radius: 4px;
+    color: white;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: rgba(15, 20, 0, 0.7);
+}
+
+
+@media(max-width:700px)
+{
+    .form-container{
+        margin-top: 10rem;
+        margin-left: 0.8rem;
+        background-color: white;
+        width: 95vw;
+        border-radius: 10px;
+    }
+    
+.form-container form label  input,textarea{
+    border:1px solid #777;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 3px;
+    position: relative;
+}
+
+.form-container span{
+    color: red;
+    position: absolute;
+    right: 238px;
+
+}
+}
+
+/* ---------end-------------------------------form control-------------------------- */
+/* --------------footer------------------ */
+
+.footer{
+    width: 80vw;
+    height: 3rem;
+    background-color: rgb(26, 23, 23);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    /* position: fixed; */
+}
+.footer p{
+    margin-top: 1rem;
+    color: white;
+}
+.footer p span{
+    color: rgb(231, 25, 180);
+}
+
+@media(max-width:700px){
+    .footer{
+        width: 95vw;
+        height: 3rem;
+        background-color: rgb(26, 23, 23);
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-left: 0.7rem;
+    }
+}
+
+@media  (max-width:980px){
+    
+    .form-container{
+        margin-top: 11rem;
+    }
+}
+
+/* --End------------footer------------------ */
+
+
+
+
+
+
+
